@@ -21,12 +21,12 @@ from reportlab.lib.styles import getSampleStyleSheet
 # Global / Adjustable Parameters
 # ---------------------------
 DATA_FOLDER = "data"       # Folder containing CSV files named "2010.csv" through "2025.csv"
-# For this version, we will train only on 2022-2024 and test on 2025.
+
 TRAIN_YEARS = [2022, 2023, 2024]
 TEST_YEAR = 2025
-END_YEAR = 2025           # Use to determine which year to drop rows with missing NextClose.
-THRESHOLD = 0.01          # 1% threshold for labeling: >+1% Buy, < -1% Sell, else Hold.
-# You may adjust the number of epochs for the neural network training:
+END_YEAR = 2025           
+THRESHOLD = 0.01          
+
 EPOCHS = 250
 BATCH_SIZE = 64
 
@@ -194,7 +194,7 @@ def main():
         print("Not enough training or testing samples. Exiting.")
         return
 
-    # Optionally, you can apply SMOTE if classes are imbalanced:
+    
     from imblearn.over_sampling import SMOTE
     sm = SMOTE(random_state=42)
     X_train_res, y_train_res = sm.fit_resample(X_train, y_train)
