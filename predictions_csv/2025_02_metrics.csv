@@ -1,0 +1,2 @@
+Year,Month,Buy_precision,Buy_recall,Buy_f1,Hold_precision,Hold_recall,Hold_f1,Sell_precision,Sell_recall,Sell_f1,accuracy,macro_precision,macro_recall,macro_f1,weighted_precision,weighted_recall,weighted_f1
+2025,2,1.0,1.0,1.0,1.0,0.75,0.8571428571428571,0.9090909090909091,1.0,0.9523809523809523,0.9473684210526315,0.9696969696969697,0.9166666666666666,0.9365079365079364,0.9521531100478469,0.9473684210526315,0.9448621553884712
